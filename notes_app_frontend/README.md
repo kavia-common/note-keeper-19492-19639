@@ -1,82 +1,45 @@
-# Lightweight React Template for KAVIA
+# Ocean Notes – React Frontend
 
-This project provides a minimal React template with a clean, modern UI and minimal dependencies.
+A modern, minimalist notes application built with React. Users can create, view, edit, and delete notes with an Ocean Professional theme.
 
 ## Features
+- Create, view, edit, and delete notes
+- Fast local persistence using localStorage
+- Search notes by title or content
+- Ocean Professional theme: modern, clean UI with subtle shadows and gradients
+- Responsive layout: sidebar list + editor
 
-- **Lightweight**: No heavy UI frameworks - uses only vanilla CSS and React
-- **Modern UI**: Clean, responsive design with KAVIA brand styling
-- **Fast**: Minimal dependencies for quick loading times
-- **Simple**: Easy to understand and modify
+## Architecture
+- src/App.js – All UI components scoped in a single file for easy handoff:
+  - Header (brand, search, actions)
+  - NotesList (sidebar)
+  - NoteEditor (main editor)
+- src/App.css – Theme tokens and modern layout styles
+- src/index.js – App entry
 
-## Getting Started
+## Styling – Ocean Professional
+- Primary: `#2563EB`
+- Secondary: `#F59E0B`
+- Error: `#EF4444`
+- Background: `#f9fafb`
+- Surface: `#ffffff`
+- Text: `#111827`
+- Gradient: subtle blue to gray tint
 
-In the project directory, you can run:
+## Commands
+- `npm start` – development server (http://localhost:3000)
+- `npm run build` – production build
+- `npm test` – tests
 
-### `npm start`
+## Notes
+- Data is stored in `localStorage` under key `notes_app_notes_v1`.
+- All changes in the editor are auto-saved.
 
-Runs the app in development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Accessibility
+- Buttons and inputs have descriptive labels and focus rings.
+- Keyboard and screen reader friendly.
 
-### `npm test`
-
-Launches the test runner in interactive watch mode.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-## Customization
-
-### Colors
-
-The main brand colors are defined as CSS variables in `src/App.css`:
-
-```css
-:root {
-  --kavia-orange: #E87A41;
-  --kavia-dark: #1A1A1A;
-  --text-color: #ffffff;
-  --text-secondary: rgba(255, 255, 255, 0.7);
-  --border-color: rgba(255, 255, 255, 0.1);
-}
-```
-
-### Components
-
-This template uses pure HTML/CSS components instead of a UI framework. You can find component styles in `src/App.css`. 
-
-Common components include:
-- Buttons (`.btn`, `.btn-large`)
-- Container (`.container`)
-- Navigation (`.navbar`)
-- Typography (`.title`, `.subtitle`, `.description`)
-
-## Learn More
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Future Enhancements
+- Tagging, pinning, and sorting options
+- Sync with a backend REST API
+- Rich text editing
